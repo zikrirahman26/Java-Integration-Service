@@ -14,7 +14,7 @@ channel hit ke endpoint Backend Middleware dan meneruskan ke endpointnya core un
     spring.security.user.password=123456
 
 # API Document
-Endpoint integration-service
+Endpoint integration-service,
     http://localhost:8080/rest/api/channel/transaction
 
     Request :
@@ -45,7 +45,7 @@ Endpoint integration-service
         }
     }
 
-Endoint core-service
+Endoint core-service,
     http://localhost:8081/api/core/service
 
     Request :
