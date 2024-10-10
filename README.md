@@ -5,16 +5,16 @@ Komunikasi service antara channel dan core, integration-app digunakan sebagai ap
 channel hit ke endpoint Backend Middleware dan meneruskan ke endpointnya core untuk mendapatkan data yang diperlukan dengan melakukan mappingan request di integration application
 
 # Clean Code
-Service Backend Middleware : integration-app
-Service 3rd Core : core-service
+    Service Backend Middleware : integration-app,
+    Service 3rd Core : core-service
 
 # Auth and Security
-Basic Auth :
-    spring.security.user.name=channel
+    Basic Auth,
+    spring.security.user.name=channel,
     spring.security.user.password=123456
 
 # API Document
-# Endpoint integration-service
+Endpoint integration-service
     http://localhost:8080/rest/api/channel/transaction
 
     Request :
@@ -45,7 +45,7 @@ Basic Auth :
         }
     }
 
-# Endoint core-service
+Endoint core-service
     http://localhost:8081/api/core/service
 
     Request :
