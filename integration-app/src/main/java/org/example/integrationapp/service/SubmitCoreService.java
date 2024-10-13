@@ -20,8 +20,8 @@ public class SubmitCoreService {
     private final RestTemplate restTemplate;
     private final GenerateTransactionId generateTransactionId;
 
-    @Value("${adapter.endpoint.url}")
-    private String adapterEndpoint;
+    @Value("${core.endpoint.url}")
+    private String coreEndpoint;
 
     @Autowired
     public SubmitCoreService(RestTemplate restTemplate,
@@ -30,7 +30,7 @@ public class SubmitCoreService {
         this.generateTransactionId = generateTransactionId;
     }
 
-    public SubmitCoreResponse sendRequestToAdapter(ChannelRequest channelRequest) {
+    public SubmitCoreResponse submitCoreResponse(ChannelRequest channelRequest) {
         try {
             SubmitCoreRequest submitCoreRequest = SubmitCoreRequest.builder()
                     .cardNumber(channelRequest.getContentRequest().getCardNum())
@@ -41,11 +41,11 @@ public class SubmitCoreService {
                     .build();
 
             HttpHeaders headers = new HttpHeaders();
-            headers.set("Content-Type", "application/json");
+            headers.setContentType(MediaType.APPLICATION_JSON);
 
             HttpEntity<SubmitCoreRequest> requestEntity = new HttpEntity<>(submitCoreRequest, headers);
             ResponseEntity<SubmitCoreResponse> response = restTemplate.exchange(
-                    adapterEndpoint,
+                    coreEndpoint,
                     HttpMethod.POST,
                     requestEntity,
                     SubmitCoreResponse.class

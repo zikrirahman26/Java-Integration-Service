@@ -19,9 +19,8 @@ public class TransactionService {
     }
 
     public Object request(ChannelRequest channelRequest) {
-        SubmitCoreResponse submitCoreResponse = submitCoreService.sendRequestToAdapter(channelRequest);
+        SubmitCoreResponse submitCoreResponse = submitCoreService.submitCoreResponse(channelRequest);
 
-        System.out.println("Req Core : " + channelRequest);
         double totalAmount = channelRequest.getContentRequest().getAmount() + submitCoreResponse.getChargeAmount();
 
         if ("00".equals(submitCoreResponse.getResponseCode())) {
