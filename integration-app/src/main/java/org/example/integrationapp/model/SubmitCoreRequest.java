@@ -1,4 +1,4 @@
-package org.example.integrationapp.model.submitCoreDTO;
+package org.example.integrationapp.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

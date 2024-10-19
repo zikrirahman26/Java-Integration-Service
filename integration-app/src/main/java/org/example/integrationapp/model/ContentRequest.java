@@ -1,4 +1,4 @@
-package org.example.integrationapp.model.channelDTO;
+package org.example.integrationapp.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,13 +9,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ContentResponse {
+public class ContentRequest {
 
     private String providerId;
     private String cardNum;
     private String accountNum;
     private double amount;
-    private double chargeAmount;
-    private double totalAmount;
 }
 

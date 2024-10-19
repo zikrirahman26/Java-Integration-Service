@@ -1,10 +1,10 @@
 package org.example.integrationapp.service;
 
-import org.example.integrationapp.exception.ErrorResponse;
-import org.example.integrationapp.model.channelDTO.ChannelRequest;
-import org.example.integrationapp.model.channelDTO.ChannelResponse;
-import org.example.integrationapp.model.channelDTO.ContentResponse;
-import org.example.integrationapp.model.submitCoreDTO.SubmitCoreResponse;
+import org.example.integrationapp.model.ErrorResponse;
+import org.example.integrationapp.model.ChannelRequest;
+import org.example.integrationapp.model.ChannelResponse;
+import org.example.integrationapp.model.ContentResponse;
+import org.example.integrationapp.model.SubmitCoreResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package org.example.integrationapp.model.submitCoreDTO;
+package org.example.coreservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,10 +6,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
-public class SubmitCoreResponse {
+public class CoreResponse {
 
     private String responseCode;
     private String responseMessage;
@@ -17,3 +17,4 @@ public class SubmitCoreResponse {
     private String journal;
     private double chargeAmount;
 }
+

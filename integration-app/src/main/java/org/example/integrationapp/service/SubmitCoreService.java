@@ -1,8 +1,8 @@
 package org.example.integrationapp.service;
 
-import org.example.integrationapp.model.submitCoreDTO.SubmitCoreRequest;
-import org.example.integrationapp.model.submitCoreDTO.SubmitCoreResponse;
-import org.example.integrationapp.model.channelDTO.ChannelRequest;
+import org.example.integrationapp.model.SubmitCoreRequest;
+import org.example.integrationapp.model.SubmitCoreResponse;
+import org.example.integrationapp.model.ChannelRequest;
 import org.example.integrationapp.utils.FormatDateUtils;
 import org.example.integrationapp.utils.GenerateTransactionId;
 import org.springframework.beans.factory.annotation.Autowired;

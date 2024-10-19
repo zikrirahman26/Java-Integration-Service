@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Request {
+public class CoreRequest {
 
     private String cardNumber;
     private String transactionId;

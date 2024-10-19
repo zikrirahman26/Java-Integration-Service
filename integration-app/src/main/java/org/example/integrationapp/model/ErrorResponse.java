@@ -1,4 +1,4 @@
-package org.example.integrationapp.exception;
+package org.example.integrationapp.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

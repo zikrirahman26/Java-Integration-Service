@@ -1,4 +1,4 @@
-package org.example.coreservice.model;
+package org.example.integrationapp.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,10 +6,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
-public class Response {
+public class SubmitCoreResponse {
 
     private String responseCode;
     private String responseMessage;
@@ -17,4 +17,3 @@ public class Response {
     private String journal;
     private double chargeAmount;
 }
-

@@ -2,7 +2,7 @@ package org.example.integrationapp.service;
 
 import org.example.integrationapp.entity.Channel;
 import org.example.integrationapp.entity.MetaData;
-import org.example.integrationapp.model.channelDTO.ChannelRequest;
+import org.example.integrationapp.model.ChannelRequest;
 import org.example.integrationapp.repository.ChannelRepository;
 import org.example.integrationapp.repository.MetaDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;

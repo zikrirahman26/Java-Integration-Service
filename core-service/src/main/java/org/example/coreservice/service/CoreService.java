@@ -1,7 +1,7 @@
 package org.example.coreservice.service;
 
-import org.example.coreservice.model.Request;
-import org.example.coreservice.model.Response;
+import org.example.coreservice.model.CoreRequest;
+import org.example.coreservice.model.CoreResponse;
 import org.example.coreservice.utils.GenerateJournal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,21 +16,20 @@ public class CoreService {
         this.generateJournal = generateJournal;
     }
 
-    public Response processPayment(Request request) {
+    public CoreResponse processPayment(CoreRequest coreRequest) {
         double chargeAmount = 1500;
         String journal = generateJournal.generateJournal();
-
-        if (request.getAmount() < 10000) {
-            return Response.builder()
+        if (coreRequest.getAmount() < 10000) {
+            return CoreResponse.builder()
                     .responseCode("99")
                     .responseMessage("Rejected")
-                    .transactionId(request.getTransactionId())
+                    .transactionId(coreRequest.getTransactionId())
                     .build();
         } else {
-            return Response.builder()
+            return CoreResponse.builder()
                     .responseCode("00")
                     .responseMessage("Successful")
-                    .transactionId(request.getTransactionId())
+                    .transactionId(coreRequest.getTransactionId())
                     .journal(journal)
                     .chargeAmount(chargeAmount)
                     .build();

@@ -1,7 +1,7 @@
 package org.example.integrationapp.controller;
 
-import org.example.integrationapp.exception.ErrorResponse;
-import org.example.integrationapp.model.channelDTO.ChannelRequest;
+import org.example.integrationapp.model.ErrorResponse;
+import org.example.integrationapp.model.ChannelRequest;
 import org.example.integrationapp.service.TransactionService;
 import org.example.integrationapp.service.ValidationService;
 import org.springframework.beans.factory.annotation.Autowired;

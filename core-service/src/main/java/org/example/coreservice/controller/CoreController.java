@@ -1,7 +1,7 @@
 package org.example.coreservice.controller;
 
-import org.example.coreservice.model.Request;
-import org.example.coreservice.model.Response;
+import org.example.coreservice.model.CoreRequest;
+import org.example.coreservice.model.CoreResponse;
 import org.example.coreservice.service.CoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -22,10 +22,10 @@ public class CoreController {
     }
 
     @PostMapping("/service")
-    public ResponseEntity<Response> processPayment(@RequestBody Request request) {
-        Response response = coreService.processPayment(request);
+    public ResponseEntity<CoreResponse> processPayment(@RequestBody CoreRequest coreRequest) {
+        CoreResponse coreResponse = coreService.processPayment(coreRequest);
 
-        return ResponseEntity.ok(response);
+        return ResponseEntity.ok(coreResponse);
     }
 }
 
